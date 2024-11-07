@@ -123,5 +123,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': BASE_DIR / 'cache',
+    }
+}
+
 EXCHANGE_RATE_API_TOKEN = '598ac1cff84cd9c7a0421cb9'
 EXCHANGE_RATE_API_LINK = f'https://v6.exchangerate-api.com/v6/{EXCHANGE_RATE_API_TOKEN}/latest/USD'
