@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class DollarRateHistory(models.Model):
+    usd_to_rub_rate = models.FloatField()
+    date_time_request = models.DateTimeField()
