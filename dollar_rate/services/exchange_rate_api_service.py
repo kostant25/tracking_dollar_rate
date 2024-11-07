@@ -6,9 +6,7 @@ from tracking_dallar_rate import settings
 
 def get_current_usd_service() -> list[dict[str, str]]:
     """Получение нового курса и 10 последних"""
-    # add_new_rate(api_req.get(settings.EXCHANGE_RATE_API_LINK).json()['conversion_rates']['RUB'])
-
-    add_new_rate(98.2)
+    add_new_rate(api_req.get(settings.EXCHANGE_RATE_API_LINK).json()['conversion_rates']['RUB'])
 
     rates = get_last_count_rates(11)
 
